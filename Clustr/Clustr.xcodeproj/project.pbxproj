@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9A894551BD38D4800C7C075 /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A894541BD38D4800C7C075 /* LFHeatMap.m */; settings = {ASSET_TAGS = (); }; };
 		A9D4DD331BD3355700A2FDAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */; };
 		A9D4DD381BD3355700A2FDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D4DD361BD3355700A2FDAD /* Main.storyboard */; };
 		A9D4DD3A1BD3355700A2FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D4DD391BD3355700A2FDAD /* Assets.xcassets */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9A894531BD38D4800C7C075 /* Clustr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clustr-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9A894541BD38D4800C7C075 /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFHeatMap.m; path = ../LFHeatMap.m; sourceTree = "<group>"; };
+		A9A894561BD38D8800C7C075 /* LFHeatMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LFHeatMap.h; path = ../LFHeatMap.h; sourceTree = "<group>"; };
 		A9D4DD2F1BD3355700A2FDAD /* Clustr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clustr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D4DD371BD3355700A2FDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				A9D4DD461BD3355700A2FDAD /* ClustrTests */,
 				A9D4DD511BD3355700A2FDAD /* ClustrUITests */,
 				A9D4DD301BD3355700A2FDAD /* Products */,
+				A9A894531BD38D4800C7C075 /* Clustr-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,8 @@
 		A9D4DD311BD3355700A2FDAD /* Clustr */ = {
 			isa = PBXGroup;
 			children = (
+				A9A894541BD38D4800C7C075 /* LFHeatMap.m */,
+				A9A894561BD38D8800C7C075 /* LFHeatMap.h */,
 				A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */,
 				A9D4DD361BD3355700A2FDAD /* Main.storyboard */,
 				A9D4DD601BD352D300A2FDAD /* ClustrMapViewController.swift */,
@@ -191,6 +198,7 @@
 		A9D4DD271BD3355700A2FDAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Wei Lin.Inc";
 				TargetAttributes = {
@@ -265,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D4DD611BD352D300A2FDAD /* ClustrMapViewController.swift in Sources */,
+				A9A894551BD38D4800C7C075 /* LFHeatMap.m in Sources */,
 				A9D4DD331BD3355700A2FDAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Clustr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiLin.Clustr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Clustr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -418,10 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Clustr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiLin.Clustr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Clustr-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -492,6 +506,7 @@
 				A9D4DD591BD3355700A2FDAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9D4DD5A1BD3355700A2FDAD /* Build configuration list for PBXNativeTarget "ClustrTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +515,7 @@
 				A9D4DD5C1BD3355700A2FDAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9D4DD5D1BD3355700A2FDAD /* Build configuration list for PBXNativeTarget "ClustrUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +524,7 @@
 				A9D4DD5F1BD3355700A2FDAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

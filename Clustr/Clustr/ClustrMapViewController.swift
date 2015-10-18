@@ -11,6 +11,12 @@ import MapKit
 import CoreLocation
 
 class ClustrMapViewController: UIViewController, CLLocationManagerDelegate {
+    
+    private struct Constants {
+        static let DestinationRegionRadius:CLLocationDistance = 500
+        static let RegionRadius:CLLocationDistance = 1000
+        static let DestinationIdentifier = "Destination"
+    }
 
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
@@ -23,12 +29,30 @@ class ClustrMapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.distanceFilter = CLLocationDistance(10)
         mapView.showsUserLocation = true
         locationManager.startUpdatingLocation()
+        
         // Do any additional setup after loading the view.
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(manager.location!.coordinate)
         print(mapView.region.span.latitudeDelta)
+        centerMapViewOnLocation(manager.location!)
     }
     
+    func centerMapViewOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, Constants.RegionRadius, Constants.RegionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    @IBAction func push(sender: UIButton) {
+//       print(mapView.convertPoint(CGPointZero, toCoordinateFromView: mapView))
+        let lowerRight = CGPoint(x: self.mapView.bounds.maxX, y: self.mapView.bounds.maxY)
+        print("upper left: \(convertPointToMap(CGPointZero))")
+        print("lower right: \(convertPointToMap(lowerRight))")
+        
+    }
+    
+    func convertPointToMap(point: CGPoint)-> CLLocationCoordinate2D {
+        return mapView.convertPoint(point, toCoordinateFromView: mapView)
+    }
 }
