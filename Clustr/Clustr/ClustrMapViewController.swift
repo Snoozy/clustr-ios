@@ -56,31 +56,15 @@ class ClustrMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     
     func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
-//        let topLeftCorner = convertPointToMap(CGPointZero)
-//        let botRightCorner = convertPointToMap(CGPoint(x: mapView.bounds.maxX, y: mapView.bounds.maxY))
-//        getMap(Double(topLeftCorner.latitude), topLeftCornerLong: Double(topLeftCorner.latitude), botRightCornerLat: Double(botRightCorner.latitude), botRightCornerLong: Double(botRightCorner.latitude))
-        
-        var locations = [CLLocation]()
-        let loc1 = CLLocation(latitude: CLLocationDegrees(47.6553350), longitude: CLLocationDegrees(-122.3035200))
-        let loc2 = CLLocation(latitude: CLLocationDegrees(37.4241060), longitude: CLLocationDegrees(-122.1660760))
-        let loc3 = CLLocation(latitude: CLLocationDegrees(37.8718990), longitude: CLLocationDegrees(-122.2585400))
-        locations.append(loc1)
-        locations.append(loc2)
-        locations.append(loc3)
-        let weights = [100, 200, 300]
-        drawHeatMap(locations, weights: weights)
+        let topLeftCorner = convertPointToMap(CGPointZero)
+        let botRightCorner = convertPointToMap(CGPoint(x: mapView.bounds.maxX, y: mapView.bounds.maxY))
+        getMap(Double(topLeftCorner.latitude), topLeftCornerLong: Double(topLeftCorner.latitude), botRightCornerLat: Double(botRightCorner.latitude), botRightCornerLong: Double(botRightCorner.latitude))
     }
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        var locations = [CLLocation]()
-        let loc1 = CLLocation(latitude: CLLocationDegrees(47.6553350), longitude: CLLocationDegrees(-122.3035200))
-        let loc2 = CLLocation(latitude: CLLocationDegrees(37.4241060), longitude: CLLocationDegrees(-122.1660760))
-        let loc3 = CLLocation(latitude: CLLocationDegrees(37.8718990), longitude: CLLocationDegrees(-122.2585400))
-        locations.append(loc1)
-        locations.append(loc2)
-        locations.append(loc3)
-        let weights = [100, 200, 300]
-        drawHeatMap(locations, weights: weights)
+        let topLeftCorner = convertPointToMap(CGPointZero)
+        let botRightCorner = convertPointToMap(CGPoint(x: mapView.bounds.maxX, y: mapView.bounds.maxY))
+        getMap(Double(topLeftCorner.latitude), topLeftCornerLong: Double(topLeftCorner.latitude), botRightCornerLat: Double(botRightCorner.latitude), botRightCornerLong: Double(botRightCorner.latitude))
     }
     
     @IBAction func panMapView(sender: UIPanGestureRecognizer) {
