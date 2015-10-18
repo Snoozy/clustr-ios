@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Alamofire
 
 class ClustrMapViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -44,6 +45,7 @@ class ClustrMapViewController: UIViewController, CLLocationManagerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+<<<<<<< Updated upstream
     @IBAction func push(sender: UIButton) {
 //       print(mapView.convertPoint(CGPointZero, toCoordinateFromView: mapView))
         let lowerRight = CGPoint(x: self.mapView.bounds.maxX, y: self.mapView.bounds.maxY)
@@ -54,5 +56,18 @@ class ClustrMapViewController: UIViewController, CLLocationManagerDelegate {
     
     func convertPointToMap(point: CGPoint)-> CLLocationCoordinate2D {
         return mapView.convertPoint(point, toCoordinateFromView: mapView)
+=======
+    func pingServer(double longitude, double latitude, String deviceToken) {
+        Alamofire.request(.GET, "http://52.88.179.215/ping?latitude=" + latitude + "&longitude=" + longitude + "&device_token=" + deviceToken)
+            .responseJSON {(request, response, JSON, error)ZADStopLeftCornerLat
+        }
+    }
+    
+    func getMap(double topLeftCornerLat, double topLeftCornerLong, double botRightCornerLat, double botRightCornerLong) {
+        Alamofire.request(.GET, "http://52.88.179.215/get_map?corner_tl_lat=" + topLeftCornerLat + "&corner_tl_long=" + topLeftCornerLong +
+        "&corner_br_lat=" + botRightCornerLat, +"&corner_br_long=" + botRightCornerLong)
+            .responseJSON {(request, response, JSON, error)
+        }
+>>>>>>> Stashed changes
     }
 }
