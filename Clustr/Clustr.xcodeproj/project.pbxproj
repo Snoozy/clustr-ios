@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		429BCEEC1BD3A392004F1C4C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FE5501BD380ED00A9E122 /* Alamofire.framework */; };
+		429BCEED1BD3A392004F1C4C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65FE5501BD380ED00A9E122 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9A894551BD38D4800C7C075 /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A894541BD38D4800C7C075 /* LFHeatMap.m */; settings = {ASSET_TAGS = (); }; };
 		A9D4DD331BD3355700A2FDAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */; };
 		A9D4DD381BD3355700A2FDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D4DD361BD3355700A2FDAD /* Main.storyboard */; };
@@ -16,11 +18,16 @@
 		A9D4DD531BD3355700A2FDAD /* ClustrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD521BD3355700A2FDAD /* ClustrUITests.swift */; };
 		A9D4DD611BD352D300A2FDAD /* ClustrMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD601BD352D300A2FDAD /* ClustrMapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A9D4DD631BD361FF00A2FDAD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D4DD621BD361FF00A2FDAD /* MapKit.framework */; };
-		C65FE5591BD380F600A9E122 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FE5501BD380ED00A9E122 /* Alamofire.framework */; };
-		C65FE55A1BD380F600A9E122 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C65FE5501BD380ED00A9E122 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		429BCEEE1BD3A392004F1C4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C65FE5471BD380ED00A9E122 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 		A9D4DD441BD3355700A2FDAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9D4DD271BD3355700A2FDAD /* Project object */;
@@ -70,23 +77,16 @@
 			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
 			remoteInfo = "Alamofire OSX Tests";
 		};
-		C65FE55B1BD380F600A9E122 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C65FE5471BD380ED00A9E122 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C638B8811BD37AC9006661DA /* Embed Frameworks */ = {
+		429BCEF01BD3A392004F1C4C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C65FE55A1BD380F600A9E122 /* Alamofire.framework in Embed Frameworks */,
+				429BCEED1BD3A392004F1C4C /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,7 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D4DD631BD361FF00A2FDAD /* MapKit.framework in Frameworks */,
-				C65FE5591BD380F600A9E122 /* Alamofire.framework in Frameworks */,
+				429BCEEC1BD3A392004F1C4C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,12 +219,12 @@
 				A9D4DD2B1BD3355700A2FDAD /* Sources */,
 				A9D4DD2C1BD3355700A2FDAD /* Frameworks */,
 				A9D4DD2D1BD3355700A2FDAD /* Resources */,
-				C638B8811BD37AC9006661DA /* Embed Frameworks */,
+				429BCEF01BD3A392004F1C4C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C65FE55C1BD380F600A9E122 /* PBXTargetDependency */,
+				429BCEEF1BD3A392004F1C4C /* PBXTargetDependency */,
 			);
 			name = Clustr;
 			productName = Clustr;
@@ -273,12 +273,8 @@
 		A9D4DD271BD3355700A2FDAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-<<<<<<< Updated upstream
-				LastSwiftUpdateCheck = 0700;
-=======
 				LastSwiftMigration = 0700;
->>>>>>> Stashed changes
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0700;
 				ORGANIZATIONNAME = "Wei Lin.Inc";
 				TargetAttributes = {
 					A9D4DD2E1BD3355700A2FDAD = {
@@ -420,6 +416,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		429BCEEF1BD3A392004F1C4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 429BCEEE1BD3A392004F1C4C /* PBXContainerItemProxy */;
+		};
 		A9D4DD451BD3355700A2FDAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A9D4DD2E1BD3355700A2FDAD /* Clustr */;
@@ -429,11 +430,6 @@
 			isa = PBXTargetDependency;
 			target = A9D4DD2E1BD3355700A2FDAD /* Clustr */;
 			targetProxy = A9D4DD4F1BD3355700A2FDAD /* PBXContainerItemProxy */;
-		};
-		C65FE55C1BD380F600A9E122 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS";
-			targetProxy = C65FE55B1BD380F600A9E122 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -544,11 +540,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< Updated upstream
 				CLANG_ENABLE_MODULES = YES;
-=======
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
->>>>>>> Stashed changes
 				INFOPLIST_FILE = Clustr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiLin.Clustr;
@@ -562,11 +555,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< Updated upstream
 				CLANG_ENABLE_MODULES = YES;
-=======
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
->>>>>>> Stashed changes
 				INFOPLIST_FILE = Clustr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiLin.Clustr;
