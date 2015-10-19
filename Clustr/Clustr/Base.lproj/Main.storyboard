@@ -19,15 +19,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-OI-fHQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5J-S9-JMB">
-                                <rect key="frame" x="295" y="347" width="33" height="30"/>
-                                <animations/>
-                                <state key="normal" title="hello"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="push:" destination="lc5-M6-kQS" eventType="touchUpInside" id="i1X-9o-YOc"/>
+                                    <outletCollection property="gestureRecognizers" destination="Lx8-MO-SRN" appends="YES" id="yZa-gR-weE"/>
                                 </connections>
-                            </button>
+                            </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,8 +39,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysa-bA-pLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Lx8-MO-SRN">
+                    <connections>
+                        <action selector="panMapView:" destination="lc5-M6-kQS" id="oUc-LT-RVV"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-32" y="-239"/>
+            <point key="canvasLocation" x="-169" y="-229"/>
         </scene>
     </scenes>
 </document>

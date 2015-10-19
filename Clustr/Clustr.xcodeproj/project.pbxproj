@@ -13,7 +13,6 @@
 		A9D4DD331BD3355700A2FDAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */; };
 		A9D4DD381BD3355700A2FDAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D4DD361BD3355700A2FDAD /* Main.storyboard */; };
 		A9D4DD3A1BD3355700A2FDAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D4DD391BD3355700A2FDAD /* Assets.xcassets */; };
-		A9D4DD3D1BD3355700A2FDAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D4DD3B1BD3355700A2FDAD /* LaunchScreen.storyboard */; };
 		A9D4DD481BD3355700A2FDAD /* ClustrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD471BD3355700A2FDAD /* ClustrTests.swift */; };
 		A9D4DD531BD3355700A2FDAD /* ClustrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD521BD3355700A2FDAD /* ClustrUITests.swift */; };
 		A9D4DD611BD352D300A2FDAD /* ClustrMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D4DD601BD352D300A2FDAD /* ClustrMapViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -101,7 +100,6 @@
 		A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D4DD371BD3355700A2FDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9D4DD391BD3355700A2FDAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9D4DD3C1BD3355700A2FDAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D4DD3E1BD3355700A2FDAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9D4DD431BD3355700A2FDAD /* ClustrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClustrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D4DD471BD3355700A2FDAD /* ClustrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClustrTests.swift; sourceTree = "<group>"; };
@@ -167,13 +165,12 @@
 		A9D4DD311BD3355700A2FDAD /* Clustr */ = {
 			isa = PBXGroup;
 			children = (
-				A9A894541BD38D4800C7C075 /* LFHeatMap.m */,
-				A9A894561BD38D8800C7C075 /* LFHeatMap.h */,
 				A9D4DD321BD3355700A2FDAD /* AppDelegate.swift */,
 				A9D4DD361BD3355700A2FDAD /* Main.storyboard */,
 				A9D4DD601BD352D300A2FDAD /* ClustrMapViewController.swift */,
 				A9D4DD391BD3355700A2FDAD /* Assets.xcassets */,
-				A9D4DD3B1BD3355700A2FDAD /* LaunchScreen.storyboard */,
+				A9A894541BD38D4800C7C075 /* LFHeatMap.m */,
+				A9A894561BD38D8800C7C075 /* LFHeatMap.h */,
 				A9D4DD3E1BD3355700A2FDAD /* Info.plist */,
 			);
 			path = Clustr;
@@ -364,7 +361,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D4DD3D1BD3355700A2FDAD /* LaunchScreen.storyboard in Resources */,
 				A9D4DD3A1BD3355700A2FDAD /* Assets.xcassets in Resources */,
 				A9D4DD381BD3355700A2FDAD /* Main.storyboard in Resources */,
 			);
@@ -440,14 +436,6 @@
 				A9D4DD371BD3355700A2FDAD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A9D4DD3B1BD3355700A2FDAD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9D4DD3C1BD3355700A2FDAD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
